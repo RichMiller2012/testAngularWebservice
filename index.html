@@ -1,0 +1,63 @@
+<html ng-app="app">
+
+    <head>
+        <title>Color Theme Test</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers\peopleCtrl.js"></script>
+
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <a href="#" class="toggle-sidebar btn btn-primary" id="menu-toggle"></a>
+
+            <div id="header">
+
+            </div>
+
+            <div id="sidebar-wrapper">
+                <div id="sidebar">
+                    <ul class="sidebar-nav">
+                        <li id="account"><a href="#">People</a></li>
+                        <li id="settings"><a href="#">Cities</a></li>
+                        <li id="logout"><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main-page-wrapper" ng-controller="peopleCtrl">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                              {{5 + 4}}
+                              {{people}}                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+
+
+        <script>
+            $("#menu-toggle").click( function (e){
+                e.preventDefault();
+                $("#wrapper").toggleClass("menuDisplayed");
+            });
+        </script>
+
+        <!-- Angular Controllers -->
+
+    </body>
+</html>
